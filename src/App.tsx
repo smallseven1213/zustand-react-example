@@ -1,4 +1,5 @@
 import { useUserStore } from './stores/user'
+import LocalStorageListener from './LocalStorageListener'
 import './App.css'
 
 function App() {
@@ -6,6 +7,7 @@ function App() {
 
   return (
     <>
+      <LocalStorageListener />
       <div className="card">
         <h1>User</h1>
         <p>Current name: {name || '(empty)'}</p>
